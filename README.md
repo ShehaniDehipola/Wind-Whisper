@@ -8,16 +8,16 @@ Features:
 - Search Functionality: Enter a specific city or location and retrieve the corresponding weather information for that locatoin.
 
 Technologies Used:
--React
--OpenWeatherMap API
--FontAwesome for icons
--React icons
--Tailwind CSS for styling
--Toastify for notifcations
+- React
+- OpenWeatherMap API
+- FontAwesome for icons
+- React icons
+- Tailwind CSS for styling
+- Toastify for notifcations
 
 How to Use:
-1.Clone the repository
-2.Install dependencies: `npm install`
-3.Obtain an API key from OpenWeatherMap and replace with your API key in the code.
-4.Obtain a Google API key
-5.Run the app: 'npm start'
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Obtain an API key from OpenWeatherMap and replace with your API key in the code.
+4. Obtain a Google API key
+5. Run the app: 'npm start'
