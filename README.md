@@ -12,7 +12,7 @@ Technologies Used:
 - OpenWeatherMap API
 - FontAwesome for icons
 - React icons
-- Tailwind CSS for styling
+- Tailwind CSS and Custom CSS for styling
 - Toastify for notifcations
 
 How to Use:
