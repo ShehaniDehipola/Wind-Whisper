@@ -2,7 +2,7 @@ import axios from 'axios';
 
 class WeatherService {
 
-    api_key = "3693e400eeed619c5516f1126ed0e659";
+    api_key = process.env.REACT_APP_OPEN_WEATHER_MAP_API_KEY;
 
     base_url = `https://api.openweathermap.org/data/2.5`;
 
@@ -39,7 +39,7 @@ class WeatherService {
 
     async getCurrentCityByCoords(lat, lon){
 
-        const api_key = "AIzaSyDY_dhtMelGd0uQZhAHFyGz478P4LgBhpI";
+        const api_key = process.env.REACT_APP_GOOGLE_API_KEY;
 
         const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lon}&key=${api_key}`;
 
