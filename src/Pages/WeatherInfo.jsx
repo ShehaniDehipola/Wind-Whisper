@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { FontAwesomeIcon  } from '@fortawesome/react-fontawesome';
 import { faSun, faCloud, faCloudRain, faSnowflake, faWind, faEye, faThermometer1, faCalendar } from '@fortawesome/free-solid-svg-icons'; 
-import { WiHumidity, WiSunset, WiSunrise, WiBarometer, WiStrongWind  } from 'react-icons/wi'
-import { toast, ToastContainer } from 'react-toastify';
+import { WiHumidity, WiSunset, WiBarometer, WiStrongWind  } from 'react-icons/wi';
 import "toastify-js/src/toastify.css";
 import Toastify from 'toastify-js';
 import 'react-toastify/dist/ReactToastify.css';
@@ -14,25 +13,15 @@ const WeatherInfo = () => {
 
   const [searchQuery, setSearchQuery] = useState("");
   const [weatherData, setWeatherData] = useState({});
-  const [weatherForecast, setWeatherForecast] = useState([]);
   const [forecastArray, setForecastArray] = useState([]);
   const [currentHourIndex, setCurrentHourIndex] = useState(0);
-  const [latitude, setLatitude] = React.useState('');
-  const [longitude, setLongitude] = React.useState('');
-  const [error, setError] = useState(null);
 
   //get current live location
   React.useEffect(() => {
     navigator.geolocation.getCurrentPosition(async(position) => {
-      setLatitude(position.coords.latitude);
-      setLongitude(position.coords.longitude);
-
-      console.log(position);
 
       try {
         const currentCity = await weatherServiceInstance.getCurrentCityByCoords(position.coords.latitude, position.coords.longitude);
-
-        console.log("current city:", currentCity);
 
         handleSearch(currentCity);
 
@@ -54,19 +43,12 @@ const WeatherInfo = () => {
   
   //function to search city
   const handleSearch = async (city) => {
-    
-    console.log("Search query city:", city);
-
     const response = await weatherServiceInstance.getCurrentWeather(searchQuery || city);
 
     if(response.data){
 
       setWeatherData(response.data);
-    
-      const lat = response.data.coord.lat;
-      const lon = response.data.coord.lon;
-
-      handleCurrentWeatherForecast(lat, lon);
+      handleCurrentWeatherForecast(response.data.coord.lat, response.data.coord.lon);
 
     }
     else{
@@ -94,7 +76,6 @@ const WeatherInfo = () => {
     const forecastResponse = await weatherServiceInstance.getWeatherForecast(lat, lon);
 
       if(forecastResponse.data){
-        setWeatherForecast(forecastResponse.data.list);
 
         const setDayOneWeatherCollection = forecastResponse.data.list.slice(0, 8);
         const setDayTwoWeatherCollection = forecastResponse.data.list.slice(8, 16);
@@ -109,9 +90,6 @@ const WeatherInfo = () => {
           d4: setDayFourWeatherCollection,
           d5: setDayFiveWeatherCollection
         }))
-
-        console.log(forecastArray);
-        console.log(forecastResponse.data);
       }
   }
   
@@ -174,6 +152,9 @@ const WeatherInfo = () => {
 
       case 'Mist':
         return <FontAwesomeIcon icon={faCloud} style={{color: '#D7DBDD', width: '200px', height: '200px'}} />;
+
+      default:
+        return <FontAwesomeIcon icon={faSun} style={{color: '#F4D03F', width: '200px', height: '200px'}} />;
     }
   }
 
@@ -197,6 +178,9 @@ const WeatherInfo = () => {
 
       case 'Mist':
         return <FontAwesomeIcon icon={faCloud} style={{color: '#D6EAF8', width: '80px', height: '80px'}} />;
+
+      default:
+        return <FontAwesomeIcon icon={faSun} style={{color: '#F9E79F', width: '80px', height: '80px'}} />;
     }
   }
 
