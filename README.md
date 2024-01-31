@@ -1,6 +1,6 @@
 ## Wind Whisper - Weather app
 
-'Wind Whisper' is a simple and elegant weather application with react. It provides current weather information including temperature, humidity, sunset, wind, and more. The app also provides 5-day weather forecast to help you plan ahead. 
+'Wind Whisper' is a simple and elegant weather application built with react. It provides current weather information including temperature, humidity, sunset, wind, and more. The app also provides 5-day weather forecast to help you plan ahead. 
 
 Features:
 - Current Weather: Get real-time weather updates for your location or any city you search.
