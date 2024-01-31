@@ -1,4 +1,4 @@
-Wind Whispher - Weather app
+## Wind Whispher - Weather app
 
 'Wind Whipher' is a simple and elegant weather application with react. It provides current weather information including temperature, humidity, sunset, wind, and more. The app also provides 5-day weather forecast to help you plan ahead. 
 
