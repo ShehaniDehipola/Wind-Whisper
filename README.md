@@ -1,6 +1,6 @@
 ## Wind Whisper - Weather app
 
-'Wind Whipher' is a simple and elegant weather application with react. It provides current weather information including temperature, humidity, sunset, wind, and more. The app also provides 5-day weather forecast to help you plan ahead. 
+'Wind Whisper' is a simple and elegant weather application with react. It provides current weather information including temperature, humidity, sunset, wind, and more. The app also provides 5-day weather forecast to help you plan ahead. 
 
 Features:
 - Current Weather: Get real-time weather updates for your location or any city you search.
@@ -20,4 +20,4 @@ How to Use:
 2. Install dependencies: `npm install`
 3. Obtain an API key from OpenWeatherMap and replace with your API key in the code.
 4. Obtain a Google API key
-5. Run the app: 'npm start'
+5. Run the app: `npm start`
