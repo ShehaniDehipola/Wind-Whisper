@@ -1,4 +1,4 @@
-## Wind Whisper - Weather app
+# Wind Whisper - Weather app
 
 <a href="https://wind-whisper-kappa.vercel.app/"> [Click here to view the Wind-Whisper hosted app] </a>
 
