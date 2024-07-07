@@ -1,6 +1,6 @@
 ## Wind Whisper - Weather app
 
-<a href="https://vercel.com/shehanis-projects/wind-whisper"> [Click here to views the Wnd-Whisper hosted app] </a>
+<a href="[https://vercel.com/shehanis-projects/wind-whisper](https://wind-whisper-kappa.vercel.app/)"> [Click here to views the Wnd-Whisper hosted app] </a>
 
 'Wind Whisper' is a simple and elegant weather application built with react. It provides current weather information including temperature, humidity, sunset, wind, and more. The app also provides 5-day weather forecast to help you plan ahead. 
 
